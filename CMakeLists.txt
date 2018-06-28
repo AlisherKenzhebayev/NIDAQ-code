@@ -141,10 +141,13 @@ add_executable(nidaqAnalog6216 src/nidaqAI6216.cpp)
 target_link_libraries(nidaqAnalog6216 ${catkin_LIBRARIES} ${NIDAQmxBASE_LIBRARIES})
 add_dependencies(nidaqAnalog6216 nidaq_generate_messages_cpp)
 
-
 add_executable(nidaqOutput6221 src/nidaqAO6221.cpp)
 target_link_libraries(nidaqOutput6221 ${catkin_LIBRARIES} ${NIDAQmxBASE_LIBRARIES})
 add_dependencies(nidaqOutput6221 nidaq_generate_messages_cpp)
+
+add_executable(nidaqOutput6216 src/nidaqAO6216.cpp)
+target_link_libraries(nidaqOutput6216 ${catkin_LIBRARIES} ${NIDAQmxBASE_LIBRARIES})
+add_dependencies(nidaqOutput6216 nidaq_generate_messages_cpp)
 
 add_executable(Modified6221 src/Modified6221.cpp)
 target_link_libraries(Modified6221 ${catkin_LIBRARIES} ${NIDAQmxBASE_LIBRARIES})
@@ -153,6 +156,11 @@ add_dependencies(Modified6221 nidaq_generate_messages_cpp)
 add_executable(VoltGen6221 src/VoltGen6221.cpp)
 target_link_libraries(VoltGen6221 ${catkin_LIBRARIES} ${NIDAQmxBASE_LIBRARIES})
 add_dependencies(VoltGen6221 nidaq_generate_messages_cpp)
+
+
+add_executable(VoltGen6221_test src/VoltGen6221_test.cpp)
+target_link_libraries(VoltGen6221_test ${catkin_LIBRARIES} ${NIDAQmxBASE_LIBRARIES})
+add_dependencies(VoltGen6221_test nidaq_generate_messages_cpp)
 
 
 ## Declare a C++ library
